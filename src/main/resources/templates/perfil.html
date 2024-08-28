@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/img/favicon.ico" type="image/png">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/root.css">
+    <link rel="stylesheet" href="../static/css/perfil.css">
+</head>
+<body>
+    <header>
+        <div class="banner-top">
+          <img src="../static/img/GAMER.gif" alt="Banner Topo" class="img-fluid" width="100%" height="100%">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="http://localhost:8080">
+            <img src="../static/img/LOGO.png" alt="Atma Games" height="50">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+              <div class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/carrinho">
+                  <img src="../static/img/carrinho.png" alt="Carrinho" style="width: 30px; height: 30px;">
+                </a>
+              </div>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/jogos">Games</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/adm" id="adminLink">Admin</a>
+              </li>
+            </ul>
+            <form id="form-pesquisa" class="form-inline mr-3">
+              <input class="form-control mr-sm-2" type="search" name="search" placeholder="Buscar jogos..."
+                aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="../static/img/default-profile.jpg" id="userIcon" alt="User Icon"
+                  style="width: 30px; height: 30px; border-radius: 50%;">
+              </a>
+              <div class="dropdown-menu" aria-labelledby="userMenu">
+                <a class="dropdown-item" href="#" id="loginLink">Login</a>
+                <a class="dropdown-item" href="http://localhost:8080/perfil" id="profileLink" style="display:none;">Perfil</a>
+                <a class="dropdown-item" href="http://localhost:8080/logout" id="logoutLink" style="display:none;">Sair</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <div class="profile-container">
+            <h1>Perfil do Usuário</h1>
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img id="profile-image" alt="Imagem de Perfil">
+                    <input type="file" id="upload-image" style="display: none;">
+                </div>
+                <div class="profile-info">
+                    <p id="name">Seu Nome</p>
+                    <p id="email">Seu Email</p>
+                    <div class="profile-info-buttons">
+                        <button id="edit-profile-button">Editar Perfil</button>
+                        <button id="history-button">Ver Histórico de Pedidos</button>
+                    </div>
+                </div>
+            </div>
+            <div class="favorites-section">
+                <h2>Jogos Favoritos</h2>
+                <div class="favorite-games" id="favorite-games">
+                    <!-- Jogos Favoritos Serão Inseridos Aqui -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup de Histórico de Pedidos -->
+        <div id="history-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" id="close-history-popup">&times;</span>
+                <h2>Histórico de Pedidos</h2>
+                <ul id="order-history">
+                    <!-- Histórico de Pedidos Será Inserido Aqui -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Popup de Edição de Perfil -->
+        <div id="edit-profile-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" id="close-edit-profile-popup">&times;</span>
+                <h2>Editar Perfil</h2>
+                <form id="edit-profile-form">
+                    <label for="name-edit">Nome:</label>
+                    <input type="text" id="name-edit" name="name" required><br>
+                    <label for="email-edit">Email:</label>
+                    <input type="email" id="email-edit" name="email" required>
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="bg-dark text-white mt-5 p-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h5>Sobre</h5>
+              <p>CNPJ: 123.456.789/0001-00</p>
+              <p>Endereço: Av. Principal, 1234</p>
+              <p>Telefone: (11) 1234-5678</p>
+              <p>Email: contato@atma.com</p>
+              <p>WhatsApp: (11) 98765-4321</p>
+            </div>
+            <div class="col-md-4">
+              <h5>Redes Sociais</h5>
+              <div class="footer-social-icons">
+                <a href="#" class="text-white"><img src="../static/img/facebook.png" alt="Facebook"></a>
+                <a href="#" class="text-white"><img src="../static/img/instagram.png" alt="Instagram"></a>
+                <a href="#" class="text-white"><img src="../static/img/twitter.png" alt="Twitter"></a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5>Empresa Parceira</h5>
+              <p>Turnover RH</p>
+              <p>Telefone: (11) 1111-2222</p>
+              <p>Email: rh@turnover.com</p>
+              <img src="../static/img/logo_Turnover_branco.png" alt="Logo Turnover" width="100px" class="img-fluid">
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../static/javascript/busca.js"></script>
+    <script src="../static/javascript/perfil.js"></script>
+</body>
+</html>

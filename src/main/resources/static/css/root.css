@@ -1,0 +1,142 @@
+﻿body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o header */
+header {
+    margin-bottom: 20px; /* Adiciona uma margem inferior ao header para separar do conteúdo principal */
+}
+
+/* Estilo para o logo */
+.navbar-brand img {
+    margin-right: 20px; /* Adiciona uma margem à direita do logo */
+}
+
+/* Estilo para a navegação */
+.navbar-nav {
+    margin-left: auto; /* Garante que a navegação se mova para o lado direito do container */
+}
+
+.navbar-toggler {
+    margin-left: 20px; /* Adiciona uma margem esquerda ao botão de alternância da navbar para garantir que não fique muito próximo do logo */
+}
+
+nav .navbar-nav .nav-item {
+    margin-right: 15px; /* Aumenta o espaço entre os itens da navegação */
+}
+
+nav .navbar-nav .nav-link {
+    border-radius: 4px; /* Adiciona border-radius aos botões */
+    padding: 10px 15px; /* Ajusta o padding dos botões */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição suave */
+}
+
+nav .navbar-nav .nav-link:hover {
+    background-color: #03cc5e; /* Cor de fundo ao passar o mouse */
+    color: #121212; /* Cor do texto ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adiciona uma sombra ao passar o mouse */
+}
+
+/* ESTILO PARA ICONE CARRINHO */
+.navbar-nav .nav-item a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-nav .nav-item img {
+    margin-left: 15px; /* Ajuste o espaço entre o ícone e outros itens da navbar */
+  }
+  
+  .navbar-nav .nav-item img:hover {
+    opacity: 0.8; /* Efeito ao passar o mouse */
+  }
+  
+
+/* Estilo para o main */
+.section-title, h2 {
+    color: white;
+    margin-bottom: 40px;
+}
+
+main .banner {
+    margin-bottom: 40px;
+}
+
+main .carousel-inner img {
+    height: 500px;
+    width: 80%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+main .destaques .card {
+    background-color: #1f1f1f;
+    border: none;
+}
+
+main .destaques .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+main .destaques .card-title {
+    color: #03cc5e;
+}
+
+main .destaques .card-text {
+    color: #bbb;
+}
+
+main .destaques .preco {
+    color: #03cc5e;
+}
+
+main .destaques .btn-primary {
+    background-color: #03cc5e;
+    border: none;
+}
+
+main .destaques .btn-primary:hover {
+    background-color: #028c4d;
+}
+
+/* Estilo para o footer */
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    padding: 40px 0;
+}
+
+footer h5 {
+    color: #fff;
+}
+
+.footer-social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-social-icons a:hover img {
+    filter: brightness(0.8);
+}
+
+#userIcon {
+    cursor: pointer;
+}
+
+#userIcon:hover {
+    opacity: 0.8;
+}

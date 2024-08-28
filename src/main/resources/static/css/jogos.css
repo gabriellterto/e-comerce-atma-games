@@ -1,0 +1,252 @@
+﻿/* jogos.css */
+/* Estilo geral do body */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o header */
+header {
+    margin-bottom: 20px;
+}
+
+/* Estilo para o logo */
+.navbar-brand img {
+    margin-right: 20px;
+}
+
+/* Estilo para a navegação */
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-toggler {
+    margin-left: 20px;
+}
+
+nav .navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+nav .navbar-nav .nav-link {
+    border-radius: 4px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav .navbar-nav .nav-link:hover {
+    background-color: #03cc5e;
+    color: #121212;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+
+/* Estilo para o main */
+.section-title, h2 {
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* CARROSSEL DE JOGOS POR CATEGORIA */
+.container-categorias {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px; /* Ajuste para garantir que o carrossel não sobreponha o footer */
+}
+
+.carousel-inner {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+h2 {
+    margin-top: 70px;
+    color: aliceblue;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto; /* Ajuste para permitir que a altura se adapte ao conteúdo */
+    transition: transform 0.5s ease;
+}
+
+.carousel-item.active {
+    display: flex;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+/* Posicionamento das setas */
+.carousel-navigation {
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 2%;
+    position: absolute;
+    margin-bottom: 100px;
+}
+
+.carousel-control-prev {
+    left: -2.5%; /* Ajuste conforme necessário */
+}
+
+.carousel-control-next {
+    right: -2.5%; /* Ajuste conforme necessário */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Cards do carrossel */
+.card {
+    width: 226px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Cor de fundo padrão */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.card:hover {
+        background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo mais escura ao passar o mouse */
+        transform: scale(1.05); /* Aumenta ligeiramente o tamanho do card */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para efeito de elevação */
+}
+
+.card-img-container {
+    position: relative;
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.card-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.card-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #03cc5e;
+}
+
+.card-category {
+    font-size: 16px;
+    color: #ffcc00;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Cor preta com opacidade de 50% */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease; /* Suaviza a transição da opacidade */
+}
+
+/* Ícone de favorito */
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px; /* Ajuste o tamanho conforme necessário */
+    height: 30px; /* Ajuste o tamanho conforme necessário */
+    background-image: url('../img/fav.png');
+    background-size: cover;
+    background-position: center;
+    display: none; /* Inicialmente escondido */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.card:hover .favorite-icon {
+    display: block; /* Mostra o ícone quando o card é hover */
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.card:hover {
+    transform: scale(1.05); 
+}
+
+
+/* Ícone de favorito favoritado */
+.favorite-icon.favorited {
+    background-image: url('../img/fav-colorido.png'); /* Pode usar uma imagem diferente se necessário */
+}
+
+/* Estilo para o footer */
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+footer h5 {
+    margin-top: 0;
+    color: #03cc5e;
+}
+
+.footer-social-icons img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+img.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo geral dos botões */
+button {
+    background-color: #03cc5e; /* Cor de fundo verde */
+    color: #121212; /* Texto preto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de mãozinha ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de hover para botões */
+button:hover {
+    background-color: #028c53; /* Cor de fundo verde mais escura */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+}

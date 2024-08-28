@@ -1,0 +1,143 @@
+/* Geral */
+body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+  }
+  
+  /* Estilo para o header e nav */
+  header .banner-top img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+  }
+  
+  nav .navbar {
+      padding: 10px 20px;
+  }
+  
+  nav .navbar-brand img {
+      height: 50px;
+  }
+  
+  nav .form-inline .form-control {
+      background-color: #1f1f1f;
+      color: #fff;
+      border: 1px solid #333;
+  }
+  
+  nav .form-inline .btn-outline-success {
+      color: #03cc5e;
+      border-color: #03cc5e;
+  }
+  
+  nav .form-inline .btn-outline-success:hover {
+      background-color: #03cc5e;
+      color: #fff;
+  }
+  
+  /* Estilo para o main */
+  main .section-title h2 {
+      color: white;
+      margin-bottom: 40px;
+  }
+  
+  main .banner {
+      margin-bottom: 40px;
+  }
+  
+  h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+  
+  form {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 8px;
+  }
+  
+  .form-group label {
+      color: #03cc5e; /* Corrigido de ##03cc5e para #03cc5e */
+  }
+  
+  .form-control {
+      background-color: #333;
+      color: white;
+      border: 1px solid #444;
+  }
+  
+  .form-control:focus {
+      border-color: #03cc5e;
+      box-shadow: none;
+  }
+  
+  .btn-success {
+      background-color: #03cc5e;
+      border: none;
+  }
+  
+  .btn-success:hover {
+      background-color: #03cc5e;
+  }
+  
+  .payment-details {
+      margin-top: 20px;
+  }
+  
+  .payment-details h3 {
+      color: #03cc5e;
+  }
+  
+  #paymentResponse {
+      margin-top: 20px;
+  }
+  
+  .alert {
+      margin-top: 20px;
+  }
+  
+  /* Estilo do footer */
+  footer {
+      background-color: #222;
+      color: white;
+      padding: 20px 0;
+  }
+  
+  footer .container {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  footer .col-md-4 {
+      margin-bottom: 20px;
+  }
+  
+  footer h5 {
+      margin-bottom: 15px;
+  }
+  
+  footer a {
+      color: white;
+  }
+  
+  footer a:hover {
+      color: #03cc5e;
+  }
+  
+  footer img {
+      max-width: 100%;
+      height: auto;
+  }
+  
+  /* Estilo das seções de pagamento */
+  #creditCardDetails, #debitCardDetails, #boletoDetails, #pixDetails {
+      margin-top: 20px;
+  }
+  
+  #creditCardDetails h4, #debitCardDetails h4, #boletoDetails h4, #pixDetails h4 {
+      color: #03cc5e;
+  }
+  

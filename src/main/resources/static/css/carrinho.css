@@ -1,0 +1,194 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    margin-bottom: 20px; 
+}
+
+
+.navbar-brand img {
+    margin-right: 20px; 
+}
+
+
+.navbar-nav {
+    margin-left: auto; 
+}
+
+.navbar-toggler {
+    margin-left: 20px; 
+}
+
+nav .navbar-nav .nav-item {
+    margin-right: 15px; 
+}
+
+nav .navbar-nav .nav-link {
+    border-radius: 4px;
+    padding: 10px 15px; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+nav .navbar-nav .nav-link:hover {
+    background-color: #03cc5e; 
+    color: #121212; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+
+.section-title, h2 {
+    color: white;
+    margin-bottom: 40px;
+}
+
+main .banner {
+    margin-bottom: 40px;
+}
+
+#userIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main .cart-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+}
+
+main .cart-container h2 {
+    color: #03cc5e;
+    margin-bottom: 20px;
+}
+
+#cartItems {
+    margin-bottom: 20px;
+}
+
+#cartItems .cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+#cartItems .cart-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+}
+
+#cartItems .cart-item .item-details {
+    flex: 1;
+    margin-left: 10px;
+}
+
+#cartItems .cart-item .item-details h4 {
+    margin: 0;
+    color: #03cc5e;
+}
+
+#cartItems .cart-item .item-details p {
+    margin: 5px 0;
+}
+
+#cartItems .cart-item button {
+    background-color: #ff3b3b;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#cartItems .cart-item button:hover {
+    background-color: #ff1a1a;
+}
+
+#cartTotal {
+    margin-bottom: 20px;
+}
+
+#cartTotal h3 {
+    color: #03cc5e;
+}
+
+
+#continuarComprando,
+#irParaPagamento {
+    background-color: #03cc5e; 
+    border: none;
+    color: #fff; 
+    padding: 12px 24px; 
+    border-radius: 8px; 
+    cursor: pointer;
+    font-size: 16px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    margin: 10px; 
+}
+
+#continuarComprando {
+    background-color: #028a3e; 
+}
+
+#irParaPagamento {
+    background-color: #028a3e; 
+}
+
+#continuarComprando:hover,
+#irParaPagamento:hover {
+    background-color: #027a35; 
+    transform: scale(1.05); 
+}
+
+#continuarComprando:active,
+#irParaPagamento:active {
+    background-color: #026a2e; 
+    transform: scale(1); 
+}
+
+
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+footer h5 {
+    margin-top: 0;
+    color: #03cc5e;
+}
+
+.footer-social-icons img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+img.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+
+.modal .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal .close-btn:hover,
+.modal .close-btn:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}

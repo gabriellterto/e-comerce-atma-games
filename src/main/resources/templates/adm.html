@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Administração</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/adm.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="http://localhost:8080">
+        <img src="../static/img/LOGO.png" alt="Atma Games" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8080/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8080/jogos">Games</a>
+          </li>
+        </ul>
+        <form id="form-pesquisa" class="form-inline mr-3">
+          <input class="form-control mr-sm-2" type="search" name="search" placeholder="Buscar jogos..."
+            aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <img src="../static/img/default-profile.jpg" id="userIcon" alt="User Icon"
+              style="width: 30px; height: 30px; border-radius: 50%;">
+          </a>
+          <div class="dropdown-menu" aria-labelledby="userMenu">
+            <a class="dropdown-item" href="http://localhost:8080/cadastro" id="loginLink">Login</a>
+            <a class="dropdown-item" href="http://localhost:8080/perfil" id="profileLink"
+              style="display:none;">Perfil</a>
+            <a class="dropdown-item" href="http://localhost:8080/logout" id="logoutLink" style="display:none;">Sair</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="painel-admin">
+      <h1>Painel de Administração</h1>
+      <nav>
+        <ul>
+          <li><a href="#gamesSection">Gerenciar Jogos</a></li>
+          <li><a href="#usersSection">Gerenciar Usuários</a></li>
+          <li><a href="#ordersSection">Histórico de Pedidos</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <!-- Seção de Gerenciamento de Jogos -->
+      <section id="gamesSection">
+        <h2>Gerenciar Jogos</h2>
+        <form id="gameForm">
+          <input type="hidden" name="gameId">
+          <label for="gameName">Nome do Jogo:</label>
+          <input type="text" id="gameName" name="gameName" required>
+
+          <label for="gameDescription">Descrição:</label>
+          <textarea id="gameDescription" name="gameDescription" required></textarea>
+
+          <label for="gamePrice">Preço:</label>
+          <input type="number" id="gamePrice" name="gamePrice" step="0.01" required>
+
+          <label for="gameDeveloper">Desenvolvedor:</label>
+          <input type="text" id="gameDeveloper" name="gameDeveloper" required>
+
+          <label for="gamePublisher">Editora:</label>
+          <input type="text" id="gamePublisher" name="gamePublisher" required>
+
+          <label for="gameReleaseDate">Data de Lançamento:</label>
+          <input type="date" id="gameReleaseDate" name="gameReleaseDate" required>
+
+          <label for="gameImageUrl">URL da Imagem:</label>
+          <input type="text" id="gameImageUrl" name="gameImageUrl" required>
+
+          <label for="category">Categoria:</label>
+          <select id="category" name="category" required></select>
+
+          <button type="submit">Salvar Jogo</button>
+        </form>
+
+        <form id="genreForm">
+          <label for="genreName">Nome da Categoria:</label>
+          <input type="text" id="genreName" name="genreName" required>
+          <button type="button" id="addGenreButton">Adicionar Categoria</button>
+        </form>
+
+        <div>
+          <h3>Filtrar Jogos</h3>
+          <input type="text" id="searchQuery" placeholder="Pesquisar por nome">
+          <button id="searchButton">Pesquisar</button>
+
+          <label for="categoryFilter">Categoria:</label>
+          <select id="categoryFilter"></select>
+          <button id="filterButton">Filtrar</button>
+        </div>
+
+        <table id="gamesTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Preço</th>
+              <th>Desenvolvedor</th>
+              <th>Data de Lançamento</th>
+              <th>Categoria</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <!-- Seção de Gerenciamento de Usuários -->
+      <section id="usersSection">
+        <h2>Gerenciar Usuários</h2>
+        <form id="userForm">
+          <input type="hidden" name="userId">
+          <label for="userName">Nome:</label>
+          <input type="text" id="userName" name="userName" required>
+
+          <label for="userEmail">E-mail:</label>
+          <input type="email" id="userEmail" name="userEmail" required>
+
+          <label for="userPassword">Senha:</label>
+          <input type="password" id="userPassword" name="userPassword" required>
+
+          <label for="userRole">Função:</label>
+          <select id="userRole" name="userRole" required>
+            <option value="ADMIN">Admin</option>
+            <option value="USER">Usuário</option>
+          </select>
+
+          <button type="submit">Salvar Usuário</button>
+        </form>
+
+        <table id="usersTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Função</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <!-- Seção de Histórico de Pedidos -->
+      <section id="ordersSection">
+        <h2>Histórico de Pedidos</h2>
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>ID do Usuário</th>
+              <th>Nome do Jogo</th>
+              <th>Preço</th>
+              <th>Status de Entrega</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="../static/javascript/busca.js"></script>
+  <script src="../static/javascript/adm.js"></script>
+</body>
+
+</html>
