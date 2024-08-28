@@ -79,8 +79,9 @@
 * **BACK-END**: Thiago Ariça e Denys Andrade
 
 
-#Estrutura do Projeto back-end:
+# Estrutura do Projeto back-end:
 
+```
 -src/
 -└── main/
 -└── java/
@@ -117,12 +118,15 @@
 *│ ├── CartItem.java
 *│ ├── Order.java
 *│ └── PaymentDetails.java
-*└── AtmaApplication.java '''
+*└── AtmaApplication.java 
+```
 
 ## Estrutura do Projeto
 
 ### Esquema Front-end: 
-`atma-frontend/
+
+```
+atma-frontend/
 ├── index.html
 ├── css/
 │ └── style.css
@@ -132,7 +136,8 @@
 ├── carrinho.js
 ├── adm.js
 ├── order.js
-└── auth.js`
+└── auth.js
+```
 
 
 
