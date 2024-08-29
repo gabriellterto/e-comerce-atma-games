@@ -3,11 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartTotalElement = document.getElementById('cartTotal');
     const continuarComprandoButton = document.getElementById('continuarComprando');
     const irParaPagamentoButton = document.getElementById('irParaPagamento');
-    const adminLink = document.getElementById('adminLink'); // Adicione este seletor para o botão de administração
-    const userRole = localStorage.getItem('userRole'); 
+    const adminLink = document.getElementById('adminLink');
+    const userRole = localStorage.getItem('userRole');
 
-
-   
     // Função para verificar se o usuário está autenticado
     function checkAuthentication() {
         const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
     checkAuthentication();
 
     // Função para lidar com logout
@@ -44,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Recupera o userId do localStorage
-    const userId = 1;
+    const userId = localStorage.getItem('userId'); // Certifique-se de que o userId está correto
     if (!userId) {
         console.error('Usuário não autenticado. Redirecionando para o login...');
         window.location.href = 'http://localhost:8080/cadastro'; // Redireciona para a página de login se o userId não estiver disponível
@@ -53,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchCart() {
         try {
-            const response = await fetch(`http://localhost:8080/api/cart/${userId}`); // Atualiza o endpoint com userId
+            const response = await fetch(`http://localhost:8080/api/cart/user/${userId}`); // Atualiza o endpoint com userId correto
             if (response.ok) {
                 const cartData = await response.json();
                 renderCart(cartData.items); // Use 'items' para obter o array de itens
